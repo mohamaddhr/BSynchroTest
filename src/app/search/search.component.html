@@ -1,0 +1,21 @@
+<div class="container">
+  <h2>Search</h2>
+  <form (ngSubmit)="searchUser()" #searchForm="ngForm">
+  <div class="form-group">
+      <label for="customerId">Search by Customer ID:</label>
+      <input type="text" id="customerId" class="form-control" [(ngModel)]="user.customerId" name="customerId" required>
+      <button type="button" class="btn btn-primary" (click)="searchUser()">Search</button>
+  </div>
+  <div class="form-group">
+     <p><strong>Name:</strong> <input type="text" class="form-control" [(ngModel)]="user.name" name="name"></p>
+  </div>
+  <div class="form-group">
+      <p><strong>Surname:</strong> <input type="text" class="form-control" [(ngModel)]="user.surname" name="surname"></p>
+  </div>
+  <div class="form-group">
+      <p><strong>Amount:</strong> <input type="text" class="form-control" [(ngModel)]="user.amount" name="amount"></p>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="deleteUser()">Delete</button>
+  <!-- <button type="button" class="btn btn-success"[disabled]="!searchForm.form.valid">Update</button> -->
+  </form>
+</div>

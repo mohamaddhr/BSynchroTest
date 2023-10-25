@@ -1,0 +1,23 @@
+<div class="registration-form">
+    <h2>Registration</h2>
+    <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="user.Name" required>
+      </div>
+      <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" [(ngModel)]="user.Surname" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" [(ngModel)]="user.Amount" required min="1">
+      </div>
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" [(ngModel)]="user.CustomerId" required>
+      </div>
+      <button type="submit" [disabled]="!registrationForm.form.valid">Register</button>
+    </form>
+  </div>
+  
